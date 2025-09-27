@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .App {
   text-align: center;
   background-image: url('./aaa.jpg');
@@ -161,3 +162,168 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+=======
+.App {
+  text-align: center;
+  background-image: url('./aaa.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: Arial;
+}
+
+.game-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player {
+  margin: 20px;
+}
+
+.hand {
+  display: flex;
+  flex-direction: row; /* 横に並べる */
+  gap: 10px;
+}
+
+.card {
+  width: 100px; /* 横幅 */
+  height: 140px; /* 縦幅（トランプの比率1.4:1） */
+  border: 3px solid #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  font-family: 'Arial unicode ms';
+  position: relative;
+  margin: 10px;
+}
+
+.card.clover {
+  color: green; /* クローバーの色 */
+}
+
+.card.diamond {
+  color: blue; /* ダイヤの色 */
+}
+
+.card.heart {
+  color: red; /* ハートの色 */
+}
+
+.card.spade {
+  color: yellow; /* スペードの色 */
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.card-symbol {
+  font-size: 2.5rem; /* マークのサイズ */
+  font-weight: bold;
+}
+
+.card-value {
+  font-size: 1.5rem; /* 数字のサイズ */
+  font-weight: bold;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.result-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.scores {
+  margin: 20px 0;
+}
+
+.rules-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.rules-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.rules-button:hover {
+  background-color: #0056b3;
+}
+
+.rules-content {
+  margin-top: 10px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 10px;
+  text-align: left;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.result-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-content {
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.result-content h2, h3, h4 {
+  margin: 10px 0;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+>>>>>>> 611379e (Initial commit without node_modules)
