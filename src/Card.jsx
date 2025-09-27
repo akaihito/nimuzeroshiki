@@ -23,13 +23,11 @@ const Card = ({ card, onClick }) => {
 
   return (
     <div className={cardClass} onClick={() => onClick(card)}>
-      {card.isFaceUp ? (
+      {card.isFaceUp && (
         <div className="card-content">
           <span className="card-symbol">{symbol}</span>
           <span className="card-value">{card.value}</span>
         </div>
-      ) : (
-        <img src="./card-back.png" alt="裏面" className="card-back" />
       )}
     </div>
   );
