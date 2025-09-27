@@ -1,8 +1,8 @@
 import React from 'react';
-//import './Card.css'; // カスタムCSSファイルを使用
+// import './Card.css'; // 必要に応じてCSSファイルを使用
 
 const Card = ({ card, onClick }) => {
-  // カードのマークとクラスを決めるための関数
+  // カードのマークとクラスを決める関数
   const getCardDetails = (value) => {
     switch (value) {
       case 0:
@@ -10,9 +10,9 @@ const Card = ({ card, onClick }) => {
       case 1:
         return { symbol: '♦', className: 'diamond' }; // ダイヤ
       case 2:
-        return { symbol: '♥', className: 'heart' }; // ハート
+        return { symbol: '♥', className: 'heart' };   // ハート
       case 3:
-        return { symbol: '♠', className: 'spade' }; // スペード
+        return { symbol: '♠', className: 'spade' };   // スペード
       default:
         return { symbol: '', className: '' };
     }
@@ -23,10 +23,14 @@ const Card = ({ card, onClick }) => {
 
   return (
     <div className={cardClass} onClick={() => onClick(card)}>
-      <div className="card-content">
-        <span className="card-symbol">{symbol}</span>
-        <span className="card-value">{card.value}</span>
-      </div>
+      {card.isFaceUp ? (
+        <div className="card-content">
+          <span className="card-symbol">{symbol}</span>
+          <span className="card-value">{card.value}</span>
+        </div>
+      ) : (
+        <img src="./card-back.png" alt="裏面" className="card-back" />
+      )}
     </div>
   );
 };
