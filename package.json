@@ -2,14 +2,14 @@
   "name": "react.dev",
   "version": "0.0.0",
   "main": "/src/index.js",
-  "homepage": "https://akaih.github.io/react.dev",
+  "homepage": "https://akaihito.github.io/nimuzeroshiki",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build -r https://github.com/akaihito/nimuzeroshiki.git"
   },
   "dependencies": {
     "@babel/eslint-parser": "^7.26.8",
