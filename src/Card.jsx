@@ -1,18 +1,18 @@
 import React from 'react';
 // import './Card.css'; // 必要に応じてCSSファイルを使用
+import cardBackImage from './card-back.png';
 
 const Card = ({ card, onClick }) => {
-  // カードのマークとクラスを決める関数
   const getCardDetails = (value) => {
     switch (value) {
       case 0:
-        return { symbol: '♣', className: 'clover' }; // クローバー
+        return { symbol: '♣', className: 'clover' };
       case 1:
-        return { symbol: '♦', className: 'diamond' }; // ダイヤ
+        return { symbol: '♦', className: 'diamond' };
       case 2:
-        return { symbol: '♥', className: 'heart' };   // ハート
+        return { symbol: '♥', className: 'heart' };
       case 3:
-        return { symbol: '♠', className: 'spade' };   // スペード
+        return { symbol: '♠', className: 'spade' };
       default:
         return { symbol: '', className: '' };
     }
@@ -23,12 +23,16 @@ const Card = ({ card, onClick }) => {
 
   return (
     <div className={cardClass} onClick={() => onClick(card)}>
-      {card.isFaceUp && (
-        <div className="card-content">
-          <span className="card-symbol">{symbol}</span>
-          <span className="card-value">{card.value}</span>
-        </div>
-      )}
+      <div className="card-content">
+        {card.isFaceUp ? (
+          <>
+            <span className="card-symbol">{symbol}</span>
+            <span className="card-value">{card.value}</span>
+          </>
+        ) : (
+          <img src={cardBackImage} alt="裏面" className="card-back" />
+        )}
+      </div>
     </div>
   );
 };
